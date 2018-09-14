@@ -42,8 +42,14 @@ span>i {
     background: rgba(51,51,51,0.425);
 }
 
+.login-prepend {
+	padding-right: 10px;
+    background-color: rgba(51,51,51,0.3) !important;
+}
+
 span {
 	border-right: none !important;
 	border-color: transparent !important;
-	background-color: rgba(51,51,51,0.3) !important;
+	/*background-color: rgba(51,51,51,0.3) !important;*/
+	background-color: transparent !important;
 }
