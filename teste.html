@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/chartist.css">
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+}
+  </style>
+</head>
+
+<body>
+  <div class="ct-chart ct-perfect-four"></div>
+
+  <script src="assets/js/chartist.js"></script>
+  <script>
+    new Chartist.Line('.ct-chart', {
+      labels: ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00"],
+      series: [[30, 50, 100, 144, 143, 214, 334, 389, 256, 156, 103, 89, 43, 10]]
+    }, {
+      fullWidth: true,
+      showArea: true,
+      chartPadding: {
+        right: 40,
+        top: 40
+      }
+    });
+  </script>
+</body>
