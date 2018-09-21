@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
 	<title>SisCABB - BI </title>
 	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="http://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/apple-icon-57x57.png">
@@ -17,39 +14,10 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="http://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="http://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-16x16.png">
 
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/chartist-novo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/chartist-tooltip-plugin.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-</head>
-<body>
-	<div class="form-login col-sm-4">
-		<h4 class="text-center mt-5 header">Entrar em sua conta</h4>
-		<form method="get" action="negocios/dashboard.php" style="margin-bottom: -55px">
-			<div class="mt-5">
-		    	<label for="matricula">Matrícula</label>
-		    	<div class="input-group">
-		        	<div class="input-group-prepend login-prepend">
-		        		<span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-sm fa-user ml-3"></i></span>
-		        	</div>
-		        	<input type="text" class="form-control-lg col rounded" id="matricula" placeholder="FXXXXXXX" aria-describedby="inputGroupPrepend" required>
-		      	</div>
-		    </div>
-			<div class="mt-3">
-		    	<label for="senha">Senha</label>
-		    	<div class="input-group">
-		        	<div class="input-group-prepend login-prepend">
-		        		<span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-sm fa-lock ml-3"></i></span>
-		        	</div>
-		        	<input type="password" class="form-control-lg col rounded" id="senha" aria-describedby="inputGroupPrepend" required>
-		      	</div>
-		    </div>
-			<div class="form-group mt-5 mb-5" style="background-color: rgba(51,51,51,0.3);padding: 20px 15px 40px;margin: -20px;">
-				<button class="btn btn-lg btn-primary col-sm-12 mb-3">Entrar</button>
-				<p class="text-center"><a href="#" style="color: white" class="text-center">Esqueceu sua senha?</a></p>
-			</div>
-		</form>
-	</div>
-	<script src="assets/js/bootstrap.js"></script>
-</body>
-</html>

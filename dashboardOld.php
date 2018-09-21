@@ -87,15 +87,15 @@
 	<!-- navbar para funções -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light nav-transparente">
 		<a class="navbar-brand ml-5" style="color:white" href="#">SisCABB <strong>RPO</strong></a>
-		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">-->
+		<button type="button" id="sidebarCollapse" class="btn">
+            <i class="fas fa-align-left"></i>
+        </button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav nav ml-auto mr-5">
 				<li class="nav-link comandos"><a href="#"><i class="fas fa-2x fa-user mr-3"></i></a></li>
 				<li class="nav-link comandos"><a href="index.php"><i class="fas fa-2x fa-power-off"></i></a></li>
 			</ul>
-		<!--</div>-->
+		</div>
 	</nav>
 	<!-- fim navbar -->
 
@@ -105,19 +105,28 @@
 		<div class="row"> 
 			<!-- sidebar -->
 			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-				<div class="sidebar-sticky">
+				<div class="sidebar-sticky" id="sidebar">
 					<ul class="nav flex-column ml-5">
 						<li class="nav-item">
 							<a class="nav-link" href="#"><i class="fas fa-home mr-4"></i><span class="active">Dashboard</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fas fa-hand-holding-usd mr-4"></i><span>Negócios</span></a>
+							<a class="nav-link dropdown-toggle" href="#menuRegistrarNegocios" data-toggle="collapse" aria-expanded="false"><i class="fas fa-hand-holding-usd mr-4"></i><span>Negócios</span></a>
+							<ul class="collapse" id="menuRegistrarNegocios">
+								<li>Registrar</li>
+							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fas fa-phone mr-4"></i><span>Contatos</span></a>
+							<a class="nav-link dropdown-toggle" href="#menuRegistrarContatos" data-toggle="collapse" aria-expanded="false"><i class="fas fa-phone mr-4"></i><span>Contatos</span></a>
+							<ul class="collapse" id="menuRegistrarContatos">
+								<li>Registrar</li>
+							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="fas fa-chart-area mr-4"></i><span>Relatórios</span></a>
+							<a class="nav-link dropdown-toggle" href="#menuRelatorios" data-toggle="collapse" aria-expanded="false"><i class="fas fa-chart-area mr-4"></i><span>Relatórios</span></a>
+							<ul class="collapse" id="menuRelatorios">
+								<li>Listar</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -140,13 +149,20 @@
 	<script src="assets/js/chartist-tooltip-plugin.js"></script>
 	<script src="assets/js/chartist-legend-plugin.js"></script>
 	<script>
+		// sidebar
+		$(document).ready(function () {
+		    $('#sidebarCollapse').on('click', function () {
+		        $('#sidebar').toggleClass('active');
+		    });
+
+		});
     	new Chartist.Line('#dashboardChart', {
     		labels: ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00"],
     		series: [{"name" : "Interações", "data" : [30, 50, 100, 144, 143, 214, 334, 389, 256, 156, 103, 89, 43, 10]}]
     	}, {
     		fullWidth: true,
     		showArea: true,
-    		height:'400px',
+    		height:'350px',
     		chartPadding: {
         		right: 40,
         		top: 40
