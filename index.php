@@ -18,9 +18,9 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="http://www.bb.com.br/pbb/app/docs/comum/images/structure/header/icon/favicon-16x16.png">
 
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/select2/select2.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 	<div class="form-login col-sm-4">
@@ -44,12 +44,30 @@
 		        	<input type="password" class="form-control-lg col rounded" id="senha" aria-describedby="inputGroupPrepend" required>
 		      	</div>
 		    </div>
+		    <div class="mt-3">
+		    	<label for="senha">Dependência</label>
+		    	<div class="form-group">
+		        	<select class="col-lg-12" id="prefixo">
+		        		<option>SAJ - 9981</option>
+		        		<option>RPO - 9982</option>
+		        		<option>REC - 9995</option>
+		        	</select>
+		      	</div>
+		    </div>
 			<div class="form-group mt-5 mb-5" style="background-color: rgba(51,51,51,0.3);padding: 20px 15px 40px;margin: -20px;">
 				<button class="btn btn-lg btn-primary col-sm-12 mb-3">Entrar</button>
 				<p class="text-center"><a href="#" style="color: white" class="text-center">Esqueceu sua senha?</a></p>
 			</div>
 		</form>
 	</div>
+	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/select2/select2.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#prefixo').select2();
+		});
+	</script>
 </body>
 </html>

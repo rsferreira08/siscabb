@@ -20,4 +20,3 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/chartist.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/chartist-novo.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/chartist-tooltip-plugin.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

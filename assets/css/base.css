@@ -1,3 +1,13 @@
+@font-face {
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:300;
+	src:local("Open Sans Light"),
+	local("OpenSans-Light"),
+	url(../fonts/google/open-sans-light.woff) 
+	format("woff")
+}
+
 html,
 body {
 	height: 100%;
@@ -20,6 +30,7 @@ a {
 .widget {
 	background: rgba(51,51,51,0.425);
 	padding: 30px;
+	border-radius: 5px;
 }
 
 .nav-transparente {
@@ -73,7 +84,7 @@ a {
 }
 
 .sidebar .nav-link .active {
-  font-weight: bolder;
+  font-weight: bolder !important;
 }
 
 .sidebar li:hover {
@@ -84,6 +95,28 @@ a {
 .sidebar li:hover a {
 	text-decoration: none;
 	color: white;
+}
+
+.nav-item a i {
+	opacity: 0.4;
+}
+.nav-item {
+	width: 100%;
+}
+.nav-item a:hover {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+	background: rgba(51,51,51,0.2);
+	border-radius: 5px;
+}
+.nav-item ul li {
+	padding: 10px;
+	list-style: none;
+}
+.active {
+	font-weight: bolder !important;
+	font-style: italic !important;
 }
 
 /* container central */
@@ -142,7 +175,7 @@ a[data-toggle="collapse"] {
     display: block;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 10px;
     transform: translateY(-50%);
 }
 
@@ -214,4 +247,13 @@ a[data-toggle="collapse"] {
 	    margin-top: 1em;
     }
   
+}
+
+/* estilos para o form */
+
+.form-actions {
+	padding: 20px;
+	background: rgba(51, 51, 51, 0.2);
+	margin-top: 20px;
+	border-radius: 5px;
 }
