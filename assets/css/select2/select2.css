@@ -69,7 +69,8 @@
 .select2-results__option {
   padding: 6px;
   user-select: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  color: black; }
   .select2-results__option[aria-selected] {
     cursor: pointer; }
 
@@ -289,7 +290,7 @@
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #5897fb;
-  color: white; }
+  color: black; }
 
 .select2-container--default .select2-results__group {
   cursor: default;

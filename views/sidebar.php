@@ -10,19 +10,19 @@
 	            <li class="nav-item">
 					<a class="nav-link dropdown-toggle" href="#menuRegistrarNegocios" data-toggle="collapse" aria-expanded="false"><i class="fas fa-hand-holding-usd mr-4"></i><span>Negócios</span></a>
 					<ul class="collapse" id="menuRegistrarNegocios">
-						<li><a href="registrarNegocio.php">Registrar</li>
+						<a href="registrarNegocio.php"><li>Registrar</li></a>
 					</ul>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link dropdown-toggle" href="#menuRegistrarContatos" data-toggle="collapse" aria-expanded="false"><i class="fas fa-phone mr-4"></i><span>Contatos</span></a>
 					<ul class="collapse" id="menuRegistrarContatos">
-						<li><a href="#">Registrar</a></li>
+						<a href="registrarContato.php"><li>Registrar</li></a>
 					</ul>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link dropdown-toggle" href="#menuRelatorios" data-toggle="collapse" aria-expanded="false"><i class="fas fa-chart-area mr-4"></i><span>Relatórios</span></a>
 					<ul class="collapse" id="menuRelatorios">
-						<li><a href="#">Listar</a></li>
+						<a href="#"><li>Listar</li></a>
 					</ul>
 				</li>
 	        </ul>

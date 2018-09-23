@@ -87,10 +87,15 @@ a {
   font-weight: bolder !important;
 }
 
-.sidebar li:hover {
+/*.sidebar ul:hover {
 	background-color: rgba(51,51,51,0.2);
 	border-radius: 5px;
 }
+.nav li:hover {
+	background: rgba(51,51,51,0.2);
+	border-radius: 5px;
+}
+*/
 
 .sidebar li:hover a {
 	text-decoration: none;
@@ -106,10 +111,16 @@ a {
 .nav-item a:hover {
 	text-decoration: none;
 	color: #fff;
-	padding: 10px;
 	background: rgba(51,51,51,0.2);
 	border-radius: 5px;
 }
+
+.nav-item ul:hover {
+	background: rgba(51,51,51,0.2);
+	border-radius: 5px; 
+}
+
+
 .nav-item ul li {
 	padding: 10px;
 	list-style: none;
@@ -253,7 +264,7 @@ a[data-toggle="collapse"] {
 
 .form-actions {
 	padding: 20px;
-	background: rgba(51, 51, 51, 0.2);
+	background: rgba(51, 51, 51, 0.425);
 	margin-top: 20px;
 	border-radius: 5px;
 }

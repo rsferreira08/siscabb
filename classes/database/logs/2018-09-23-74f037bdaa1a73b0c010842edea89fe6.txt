@@ -1,0 +1,7 @@
+Time : 15:38:04
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT a.nome as produto, b.nome as segmentacao, b.idProduto FROM tb_produtos a, tb_segmentacaoproduto b WHERE a.id=b.idProduto AND a.idPrefixo=?
+
+Time : 15:36:39
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT a.nome as produto, b.nome as segmentacao, b.idProduto FROM tb_produtos a, tb_segmentacaoproduto b WHERE a.id=b.idProduto AND a.idPrefixo=?
