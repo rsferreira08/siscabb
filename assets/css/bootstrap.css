@@ -4675,7 +4675,7 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.page-link {
+/*.page-link {
   position: relative;
   display: block;
   padding: 0.5rem 0.75rem;
@@ -4684,20 +4684,41 @@ input[type="button"].btn-block {
   color: #007bff;
   background-color: #fff;
   border: 1px solid #dee2e6;
+}*/
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: transparent;
+  border: transparent;
 }
 
-.page-link:hover {
+/*.page-link:hover {
   z-index: 2;
   color: #0056b3;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
+}*/
+
+.page-link:hover {
+  z-index: 2;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(51,51,51,0.3);
+  border-color: transparent;
+  border-radius: 5px;
 }
 
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border: none;
+  /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/
 }
 
 .page-link:not(:disabled):not(.disabled) {
@@ -4718,16 +4739,24 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: rgba(51,51,51,0.3);
+  border-color: transparent;
+  border-radius: 5px;
 }
 
-.page-item.disabled .page-link {
+/*.page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
   background-color: #fff;
   border-color: #dee2e6;
+}*/
+
+.page-item.disabled .page-link {
+  color: #ffffff;
+  cursor: no-drop;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .pagination-lg .page-link {
@@ -4952,11 +4981,17 @@ input[type="button"].btn-block {
   color: #202326;
 }
 
-.alert-success {
+/*.alert-success {
   color: #155724;
   background-color: #d4edda;
   border-color: #c3e6cb;
-}
+}*/
+
+.alert-success {
+    background-color: rgba(100,255,66,0.29);
+    border-color: rgba(100,255,66,0.7);
+    color: #fff;
+  }
 
 .alert-success hr {
   border-top-color: #b1dfbb;
@@ -4995,9 +5030,9 @@ input[type="button"].btn-block {
 }
 
 .alert-danger {
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
+    background-color: rgba(242,99,73,0.29) !important;
+    border-color: rgba(242,99,73,0.7) !important;
+    color: #fff !important;
 }
 
 .alert-danger hr {
@@ -7573,6 +7608,11 @@ button.bg-dark:focus {
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important;
+}
+
+.ml-6,
+.mx-6 {
+  margin-left: 3.5rem !important;
 }
 
 .p-0 {

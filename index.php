@@ -1,3 +1,11 @@
+<?php
+
+require_once('config/config.php');
+
+$array_prefixos = Prefixo::buscaTodos();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +33,8 @@
 <body>
 	<div class="form-login col-sm-4">
 		<h4 class="text-center mt-5 header">Entrar em sua conta</h4>
+		<div id="resultMessage" class="alert text-center mt-5" style="display: none;">
+		</div>
 		<form method="get" action="negocios/dashboard.php" style="margin-bottom: -55px">
 			<div class="mt-5">
 		    	<label for="matricula">Matrícula</label>
@@ -32,7 +42,7 @@
 		        	<div class="input-group-prepend login-prepend">
 		        		<span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-sm fa-user ml-3"></i></span>
 		        	</div>
-		        	<input type="text" class="form-control-lg col rounded" id="matricula" placeholder="FXXXXXXX" aria-describedby="inputGroupPrepend" required>
+		        	<input type="text" class="form-control-lg col rounded" id="matricula" placeholder="FXXXXXXX" aria-describedby="inputGroupPrepend" maxlength="8" required>
 		      	</div>
 		    </div>
 			<div class="mt-3">
@@ -48,14 +58,14 @@
 		    	<label for="senha">Dependência</label>
 		    	<div class="form-group">
 		        	<select class="col-lg-12" id="prefixo">
-		        		<option>SAJ - 9981</option>
-		        		<option>RPO - 9982</option>
-		        		<option>REC - 9995</option>
+		        		<?php foreach ( $array_prefixos as $prefixo ) { ?>
+		        			<option value="<?=$prefixo["id"]?>"><?=$prefixo["abreviacao"]?> - <?=$prefixo["prefixo"]?></option>
+		        	<?php } ?>
 		        	</select>
 		      	</div>
 		    </div>
 			<div class="form-group mt-5 mb-5" style="background-color: rgba(51,51,51,0.3);padding: 20px 15px 40px;margin: -20px;">
-				<button class="btn btn-lg btn-primary col-sm-12 mb-3">Entrar</button>
+				<button class="btn btn-lg btn-primary col-sm-12 mb-3" id="botaoEntrar">Entrar</button>
 				<p class="text-center"><a href="#" style="color: white" class="text-center">Esqueceu sua senha?</a></p>
 			</div>
 		</form>
@@ -63,6 +73,7 @@
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
 	<script src="assets/js/select2/select2.min.js"></script>
+	<script src="assets/js/login/ajax.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {

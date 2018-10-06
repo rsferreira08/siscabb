@@ -1,0 +1,7 @@
+Time : 09:29:14
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.matriculaOferta' in 'where clause'
+Raw SQL : SELECT a.mci, b.nome as 'produto', c.nome as 'segmentacao', a.valorCartaoAtual, a.valorContratado, a.valorSeguroContratado, a.seguro, a.matriculaOferta, a.dataOferta FROM tb_negocios a, tb_produtos b, tb_segmentacaoproduto c WHERE a.idProduto=b.id AND a.idSegmentacaoProduto=c.id AND c.idProduto=b.id AND a.pendente=1 AND c.matriculaOferta='F8711434' ORDER BY a.dataOferta
+
+Time : 09:29:05
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.matricula' in 'where clause'
+Raw SQL : SELECT a.mci, b.nome as 'produto', c.nome as 'segmentacao', a.valorCartaoAtual, a.valorContratado, a.valorSeguroContratado, a.seguro, a.matriculaOferta, a.dataOferta FROM tb_negocios a, tb_produtos b, tb_segmentacaoproduto c WHERE a.idProduto=b.id AND a.idSegmentacaoProduto=c.id AND c.idProduto=b.id AND a.pendente=1 AND c.matricula='F8711434' ORDER BY a.dataOferta

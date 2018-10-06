@@ -1,0 +1,51 @@
+Time : 23:36:52
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_siscabb.tb_demandas' doesn't exist
+Raw SQL : SELECT * FROM tb_demandas WHERE idPrefixo=? AND ativo=1  ORDER BY demanda
+
+Time : 23:14:56
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.idPrefixo' in 'where clause'
+Raw SQL : SELECT * FROM tb_demanda WHERE a.idPrefixo=? AND a.ativo=1  ORDER BY demanda
+
+Time : 22:51:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT a.demanda as demanda, b.idDemanda, b.segmentacao as segmentacao, b.id   FROM tb_demanda a, tb_segmentacaodemanda b WHERE a.id=b.idDemanda AND a.idPrefixo=1 AND a.ativo=?  ORDER BY a.demanda, b.segmentacao
+
+Time : 21:13:41
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'idProduto' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 21:13:16
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'idProduto' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 21:12:11
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'idProduto' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 21:10:54
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'idProduto' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 21:10:43
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'idProduto' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 12:40:43
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'valorCartaoAtual' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 12:02:19
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'valorSeguroContratado' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 11:52:36
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'numeroOperacaoCDC' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?,1,?)
+
+Time : 11:51:48
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta,pendente,numeroOperacaoCDC) VALUES (?,?,?,?,?,?,?,1,?,?)
+
+Time : 10:52:03
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'valorCartaoAtual' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,dataOferta) VALUES (?,?,?,?,?,?,?,1,?,?)

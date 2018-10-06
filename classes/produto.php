@@ -1,6 +1,8 @@
 <?php
 
-class Produtos
+//require_once('../config/config.php');
+
+class Produto
 {
     /*=================================
     =            Variáveis            =
@@ -66,14 +68,12 @@ class Produtos
                 $this->setId($array_produtos["id"]);
                 $this->setNome($array_produtos["nome"]);
                 $this->setIdPrefixo($array_produtos["idPrefixo"]);
-
-                // Carrega os Segmentos do Produto em um array
-                //$this->segmentos = $this->databaseObj->query("SELECT * FROM tb_produtossegmentos WHERE produto_id=? ORDER BY nome", array($this->id));
             }
             
         }
 
     }
+
 
     /**
      * Busca todos os registros
@@ -84,7 +84,7 @@ class Produtos
         $databaseObj = new Db(DB_HOST, DB_NAME, DB_USER, DB_PASS);
 
         // Busca os registros no Banco de dados
-        $returnArray = $databaseObj->query("SELECT a.nome as produto, b.idProduto, b.nome as segmentacao, b.id   FROM tb_produtos a, tb_segmentacaoproduto b WHERE a.id=b.idProduto AND a.idPrefixo=$idPrefixo ORDER BY a.nome, b.nome");
+        $returnArray = $databaseObj->query("SELECT a.nome as produto, b.idProduto, b.nome as segmentacao, b.id   FROM tb_produtos a, tb_segmentacaoproduto b WHERE a.id=b.idProduto AND a.idPrefixo=$idPrefixo AND a.ativo=1 ORDER BY a.nome, b.nome");
 
         // Close Connection
         $databaseObj->CloseConnection();
@@ -92,20 +92,14 @@ class Produtos
         return $returnArray;
     }
 
-    /**
-     * Busca segmentos
-     */
-    /*public static function BuscaSegmentos($produto_id) {
 
-        // Busca os registros no Banco de dados
-        $returnArray = $this->databaseObj->query("SELECT * FROM tb_produtossegmentos WHERE produto_id=? ORDER BY nome", array($this->produto_id));
-        return $returnArray;
-    }
 
-    function __destruct() {
-        $this->databaseObj->CloseConnection();
-    }*/
-    
-    /*=====  End of Funções  ======*/
 }
+
+/*$v1 = new Produto;
+// $mci, $idProduto, $idSegmentacaoProduto, $valorCartaoAtual="", $valorContratado="", $valorSeguroContratado="", $seguro="", $matriculaOferta
+$ofertas = $v1->buscaOfertaPorMatricula("F8711433");
+
+print_r($ofertas);*/
+
 ?>

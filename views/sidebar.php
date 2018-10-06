@@ -22,7 +22,8 @@
 				<li class="nav-item">
 					<a class="nav-link dropdown-toggle" href="#menuRelatorios" data-toggle="collapse" aria-expanded="false"><i class="fas fa-chart-area mr-4"></i><span>Relatórios</span></a>
 					<ul class="collapse" id="menuRelatorios">
-						<a href="#"><li>Listar</li></a>
+						<a href="listarNegociosPendentes.php"><li>Listar Negócios Pendentes</li></a>
+						<a href="listarVolumeNegocios.php"><li>Negócios</li></a>
 					</ul>
 				</li>
 	        </ul>

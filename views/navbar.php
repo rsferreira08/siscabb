@@ -7,9 +7,16 @@
 		            	<i class="fas fa-align-justify"></i>
 		            </button>
 		            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav nav ml-auto mr-5">
-							<li class="nav-link comandos"><a href="#"><i class="fas fa-2x fa-user"></i></a></li>
-							<li class="nav-link comandos"><a href="../index.php"><i class="fas fa-2x fa-power-off"></i></a></li>
+						<ul class="navbar-nav nav ml-auto">
+							<li class="nav-item dropdown" id="dropdown-pessoal">
+								<a class="nav-link dropdown-toggle" href="#" id="menuPessoal" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img src="../assets/images/avatar.jpg" style="width: 50px; height: 50px" class="rounded-circle"><i class="ml-4"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="menuPessoal">
+							        <a class="dropdown-item" href="#">Meus Dados</a>
+							        <a class="dropdown-item" href="#" id="botaoLogoff">Sair</a>
+						        </div>
+						    </li>
 						</ul>
 					</div>
 		        </div>

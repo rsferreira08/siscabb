@@ -1,0 +1,15 @@
+Time : 16:38:05
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND idPrefixo=1' at line 1
+Raw SQL : SELECT * FROM tb_usuarios WHERE matricula=F8711434 AND senha=7/VaRYoG4FCFzOiGxcQAnNx36xwxOesZtSZJDGk0HMw= AND idPrefixo=1
+
+Time : 16:27:03
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 1, 0, 1)' at line 1
+Raw SQL : INSERT INTO tb_usuarios (idPrefixo, matricula, nome, senha, nivelPermissao, ata, faleCom) VALUES (1, F8711434, 123, 3RnP7FxcfjvtE9lAvFCI+LetWL2RBmEWxOr/z0AuNsA=, 1, 0, 1)
+
+Time : 16:26:02
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 1, 0, 1' at line 1
+Raw SQL : INSERT INTO tb_usuarios (idPrefixo, matricula, nome, senha, nivelPermissao, ata, faleCom) VALUES (1, F8711434, 123, 3RnP7FxcfjvtE9lAvFCI+LetWL2RBmEWxOr/z0AuNsA=, 1, 0, 1
+
+Time : 16:25:13
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Ferreira, 7/VaRYoG4FCFzOiGxcQAnNx36xwxOesZtSZJDGk0HMw=, 1, 0, 1' at line 1
+Raw SQL : INSERT INTO tb_usuarios (idPrefixo, matricula, nome, senha, nivelPermissao, ata, faleCom) VALUES (1, F8711434, Rodrigo Ferreira, 7/VaRYoG4FCFzOiGxcQAnNx36xwxOesZtSZJDGk0HMw=, 1, 0, 1

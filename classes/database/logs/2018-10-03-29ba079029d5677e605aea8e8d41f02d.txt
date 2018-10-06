@@ -1,0 +1,7 @@
+Time : 08:56:51
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_siscabb.tb_demanda' doesn't exist
+Raw SQL : SELECT a.demanda as demanda, b.idDemanda, b.segmentacao as segmentacao, b.id FROM tb_demanda a, tb_segmentacaodemanda b WHERE a.id=b.idDemanda AND a.idPrefixo=? AND a.ativo=1  ORDER BY a.demanda, b.segmentacao
+
+Time : 08:27:16
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'matriculaOferta' cannot be null
+Raw SQL : INSERT INTO tb_negocios (mci,idProduto,idSegmentacaoProduto,valorCartaoAtual,valorContratado,valorSeguroContratado,seguro,ofertado,matriculaOferta,negocioFechado,matriculaNegocio,dataOferta,dataNegocio,pendente,numeroOperacaoCDC,idPrefixo) VALUES (?,?,?,?,?,?,?,1,?,1,?,?,?,0,?,?)
