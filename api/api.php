@@ -43,6 +43,31 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 		// Verifica qual ação será executada
 		switch ($_POST['acao']) {
 
+			case 'clientesEmEspera':
+				if ( empty($req_parametros['quantidadeEmEspera']) ) {
+					$retorno_mensagem[] = "Favor preencher a quantidade de clientes em espera";
+				}
+
+				if ( empty($retorno_mensagem) ) {
+					try {
+						$clienteEmEsperaObj = new Cliente;
+						$clienteEmEsperaObj->setQuantidadeEmEspera($req_parametros['quantidadeEmEspera']);
+						$clienteEmEsperaObj->setMatriculaRegistro($_SESSION['matricula']);
+
+						if ( $clienteEmEsperaObj->adicionaEmEspera() ) {
+							$retorno_status = "OK";
+							$retorno_mensagem = "Incluído com sucesso";
+						} else {
+							$retorno_mensagem = "Erro ao incluir. Contate o administrador";
+						}
+					} catch (Exception $e) {
+							$retorno_mensagem = "".$e->getMessage();
+					}
+				} else {
+					$retorno_mensagem = implode('<br>', $retorno_mensagem);
+				}
+				break;
+
 			case 'login':
 				if ( empty($req_parametros['matricula']) ) {
 					$retorno_mensagem[] = "Digite sua matricula";

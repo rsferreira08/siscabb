@@ -131,7 +131,6 @@ $array_produtos = Produto::BuscaTodos(1);
 
 	<script src="../assets/js/select2/select2.min.js"></script>
 	<script src="../assets/js/switchery/switchery.min.js"></script>
-	<script src="../assets/js/jquery.mask.js"></script>
 	<script src="../assets/js/negocios/formNegocios.js"></script>
 	<script src="../assets/js/negocios/ajax.js"></script>
 	<script type="text/javascript">

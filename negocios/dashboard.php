@@ -161,7 +161,7 @@ $taxaConversaoIndividual = round($taxaConversaoIndividual,0)
 					<div class="col-md-6">
 						<div>
 							<div class="widget" style="display: block !important;" id="dashboardChart">
-								<h3>Interações do dia</h3>
+								<h3>Clientes em Espera</h3>
 							</div>
 						</div>
 					</div>
